@@ -15,7 +15,7 @@
  * @property User $author
  * @property Post[] $posts
  */
-class Category extends CActiveRecord
+class Category extends FEActiveRecord
 {
 	/**
 	 * @return string the associated database table name

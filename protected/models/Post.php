@@ -25,7 +25,7 @@
  * @property Attachment $thumbnail
  * @property User $updateAuthor
  */
-class Post extends CActiveRecord
+class Post extends FEActiveRecord
 {
 	/**
 	 * @return string the associated database table name
