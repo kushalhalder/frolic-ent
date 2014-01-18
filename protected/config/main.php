@@ -2,13 +2,14 @@
 
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
+Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
-
+	'name'=>'Frolic Ent',
+	'theme'=>'bootstrap',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -83,6 +84,9 @@ return array(
        		'class'=>'CDbAuthManager',
        		'connectionID'=>'db',
 		),
+		'bootstrap'=>array(
+            'class'=>'bootstrap.components.Bootstrap',
+        ),
 	),
 
 	// application-level parameters that can be accessed
