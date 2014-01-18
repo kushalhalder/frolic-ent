@@ -11,6 +11,12 @@
  * @property string $name
  * @property string $create_time
  * @property string $update_time
+ *
+ * The followings are the available model relations:
+ * @property Category[] $categories
+ * @property Gossip[] $gossips
+ * @property Post[] $posts
+ * @property Post[] $posts1
  */
 class User extends CActiveRecord
 {
@@ -47,6 +53,10 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'categories' => array(self::HAS_MANY, 'Category', 'author_id'),
+			'gossips' => array(self::HAS_MANY, 'Gossip', 'author_id'),
+			'posts' => array(self::HAS_MANY, 'Post', 'author_id'),
+			'posts1' => array(self::HAS_MANY, 'Post', 'update_author_id'),
 		);
 	}
 
